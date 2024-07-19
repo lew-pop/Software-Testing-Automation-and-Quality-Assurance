@@ -39,7 +39,7 @@ I had the opportunity to develop a backend for a mobile application for a client
 
 ## Reflection:
 
-This course provided invaluable insights into the importance of rigorous testing and quality assurance in software development. I learned to anticipate and mitigate biases, understand the critical nature of thorough testing, and recognize the potential consequences of undetected errors. The experience underscored the necessity of developing and adhering to effective test design approaches, especially under time constraints.
+This project provided invaluable insights into the importance of rigorous testing and quality assurance in software development. I learned to anticipate and mitigate biases, understand the critical nature of thorough testing, and recognize the potential consequences of undetected errors. The experience underscored the necessity of developing and adhering to effective test design approaches, especially under time constraints.
 
 The project highlighted the significant impact of quality assurance on software reliability and instilled a mindset of continuous improvement and vigilance in testing practices. Moving forward, I am committed to applying these principles in all my development projects, ensuring high-quality and reliable software solutions.
 
