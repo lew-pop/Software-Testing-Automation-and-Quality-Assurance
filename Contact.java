@@ -6,7 +6,7 @@ public class Contact {
     private String phoneNumber;
     private String contactAddress;
 
-    // Constructor with required fields
+    // Contact constructor with required fields
     public Contact(String id, String first, String last, String number, String address) {
         setContactID(id);
         setFirstName(first);
@@ -14,7 +14,7 @@ public class Contact {
         setPhoneNumber(number);
         setContactAddress(address);
     }
-    // Getters
+    // Contact Field Getters
     public String getContactID() {
         return contactID;
     }
@@ -35,7 +35,7 @@ public class Contact {
         return contactAddress;
     }
 
-    // Setters
+    // Contact Field Setters
     private void setContactID(String id) {
         checkNameField(id);
         contactID = id;
@@ -65,7 +65,7 @@ public class Contact {
         contactAddress = address;
     }
 
-    // Function to check field argument requirements
+    // Function to check for valid field argument requirements
     public void checkNameField(String fieldName) {
 
         if(fieldName == null) {
