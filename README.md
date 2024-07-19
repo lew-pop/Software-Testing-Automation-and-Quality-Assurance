@@ -3,10 +3,15 @@
 ## Repository Overview
 
 This repository showcases my experience and skills in applying software engineering testing strategies and practices as part of the software development lifecycle, including requirements analysis, verification and validation, and quality management. The items in the repository demonstrate the ability to translate user requirements into actionable development plans and integrate  software testing strategies to ensure all user requirements are fulfilled. Inside this repository, you will find:
+
 * Phonebook Mobile App (Backend): This application manages back-end services for a phonebook mobile application.
+  
 * Contact.java: Object class to create a contact entry.
+  
 * ContactService.java: Service class that manages Contact data and functionality.
+  
 * ContactServiceTest.java: Junit coverage tests to ensure the ContactService class fulfills all user requirements. The unit tests were designed with obscure structure-based methods.
+  
 * ContactTest.java: Junit coverage tests to ensure the Contact object contains all of the user-required characteristics. 
 
 
