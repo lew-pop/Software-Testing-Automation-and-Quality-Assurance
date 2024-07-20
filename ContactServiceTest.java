@@ -18,9 +18,11 @@ class ContactServiceTest {
     @Test
     @DisplayName("Test contact service, constructor")
     void contactServiceClassTest() {
-        // Create expected contact service value
+        // Create Actual contact service value
         ContactService actual = new ContactService();
+        // Create expected contact service value
         HashMap<String, Contact> expected = new HashMap<String, Contact>();
+        // Compare expected to actual. 
         assertEquals(expected, actual.getContactService());
     }
     // Test to ensure the Contact Service correctly adds contacts to the contact list.
