@@ -1,7 +1,6 @@
+// Import Java utility and Junit dependencies
 import org.junit.jupiter.api.*;
-
 import java.util.HashMap;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class ContactServiceTest {
