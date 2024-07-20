@@ -5,16 +5,17 @@ import java.util.HashMap;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ContactServiceTest {
-
+    // Initialize static components for testing
     static Contact testContact;
     static String testName;
     static String uniqueID;
-
+    // Setup using @BeforeAll annotation to configure static components before all tests.
     @BeforeAll
     static void setup(){
         testName = "";
         uniqueID = "";
     }
+    // Test ContactService class with @test and @DisplayName JUnit annotations.  
     @Test
     @DisplayName("Test contact service, constructor")
     void contactServiceClassTest() {
@@ -23,7 +24,7 @@ class ContactServiceTest {
         HashMap<String, Contact> expected = new HashMap<String, Contact>();
         assertEquals(expected, actual.getContactService());
     }
-
+    // Test to ensure the Contact Service correctly adds contacts to the contact list.
     @Test
     @DisplayName("Test contact service, add contact with a unique ID")
     void addContactTest() {
@@ -37,6 +38,7 @@ class ContactServiceTest {
         // unique contactID
         assertEquals(testContact, testContactService.getContact("0000000005"));
     }
+     // Test to ensure the Contact Service handles duplicate contact entries correctly.
     @Test
     @DisplayName("Test contact service, add contact with a duplicate ID")
     void addDuplicateContactIdTest(){
@@ -47,6 +49,7 @@ class ContactServiceTest {
         testContact = new Contact(uniqueID, "Bob", "Jangles", "9815457662", "1312 Olympic Ct. Tennesse, MA");
         assertThrows(IllegalArgumentException.class, () -> testContactService.addContact(uniqueID, testContact));
     }
+     // Test to ensure the Contact Service correctly removes contact entries.
     @Test
     @DisplayName("Test contact service, delete contact with a unique ID")
     void removeContactTest() {
@@ -57,6 +60,7 @@ class ContactServiceTest {
         testContactService.removeContact(uniqueID);
         assertThrows(NullPointerException.class, () -> testContactService.getContact(uniqueID));
     }
+     // Test to ensure the Contact Service removes contacts with invalid IDs.
     @Test
     @DisplayName("Test contact service, delete contact with an invalid ID")
     void removeInvalidContactIdTest(){
@@ -65,6 +69,7 @@ class ContactServiceTest {
         uniqueID = "0000000008";
         assertThrows(IllegalArgumentException.class, () -> testContactService.removeContact(uniqueID));
     }
+    // Test to ensure the Contact Service correctly updates the contact's first name.
     @Test
     @DisplayName("Test contact service, update first name with a unique ID")
     void updateFirstNameTest() {
@@ -76,6 +81,7 @@ class ContactServiceTest {
         testContact = testContactService.getContact(uniqueID);
         assertEquals(testName, testContact.getFirstName());
     }
+    // Test to ensure the Contact Service manages invalid first name input.
     @Test
     @DisplayName("Test contact service, update first name with an invalid first name")
     void updateInvalidFirstNameTest() {
@@ -84,6 +90,7 @@ class ContactServiceTest {
         uniqueID = "0000000002";
         assertThrows(IllegalArgumentException.class, () -> testContactService.updateFirstName(uniqueID, "DeBoxoxnards"));
     }
+    // Test to ensure the Contact Service correctly updates the contact's last name.
     @Test
     @DisplayName("Test contact service, update last name with a unique ID")
     void updateLastNameTest() {
@@ -95,6 +102,7 @@ class ContactServiceTest {
         testContact = testContactService.getContact(uniqueID);
         assertEquals(testName, testContact.getLastName());
     }
+    // Test to ensure the Contact Service manages invalid last name input.
     @Test
     @DisplayName("Test contact service, update last name with an invalid last name")
     void updateInvalidLastName() {
@@ -103,6 +111,7 @@ class ContactServiceTest {
         uniqueID = "0000000002";
         assertThrows(IllegalArgumentException.class, () -> testContactService.updateLastName(uniqueID, "DeBoulevard"));
     }
+    // Test to ensure the Contact Service correctly updates the contact's phone number.
     @Test
     @DisplayName("Test contact service, update phone number with a unique ID")
     void updatePhoneNumberTest() {
@@ -114,6 +123,7 @@ class ContactServiceTest {
         testContact = testContactService.getContact(uniqueID);
         assertEquals(testName, testContact.getPhoneNumber());
     }
+    // Test to ensure the Contact Service manages invalid phone number input.
     @Test
     @DisplayName("Test contact service, update phone number with an invalid phone number")
     void updateInvalidPhoneNumber() {
@@ -122,6 +132,7 @@ class ContactServiceTest {
         uniqueID = "0000000002";
         assertThrows(IllegalArgumentException.class, () -> testContactService.updatePhoneNumber(uniqueID, "15654201990"));
     }
+    // Test to ensure the Contact Service correctly updates the contact's address.
     @Test
     @DisplayName("Test contact service, update address with a unique ID")
     void updateAddressTest() {
@@ -133,6 +144,7 @@ class ContactServiceTest {
         testContact = testContactService.getContact(uniqueID);
         assertEquals(testName, testContact.getContactAddress());
     }
+    // Test to ensure the Contact Service manages invalid address input.
     @Test
     @DisplayName("Test contact service, update address with an invalid address")
     void updateInvalidAddress() {
@@ -141,7 +153,7 @@ class ContactServiceTest {
         uniqueID = "0000000002";
         assertThrows(IllegalArgumentException.class, () -> testContactService.updateAddress(uniqueID, "7777 Boxnard Way Court, Las Vegas, NV 92212"));
     }
-    // Function to populate test contact service
+    // Function to populate contact service test
     public static void generateTestService(ContactService tempService){
 
         Contact contactOne = new Contact("0000000001", "Bescobeeys", "Maltdarts", "8587858956",
