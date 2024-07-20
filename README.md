@@ -12,7 +12,9 @@ This repository showcases my experience and skills in applying software engineer
   
 * ContactServiceTest.java: Junit coverage tests to ensure the ContactService class fulfills all user requirements. The unit tests were designed with obscure structure-based methods.
   
-* ContactTest.java: Junit coverage tests to ensure the Contact object contains all of the user-required characteristics. 
+* ContactTest.java: Junit coverage tests to ensure the Contact object contains all of the user-required characteristics.
+
+* Summary and Reflection.pdf: A summary and reflection of the design and development of the Phonebook mobile back-end services and JUnit tests.
 
 
 ## Experience and Knowledge Gained:
